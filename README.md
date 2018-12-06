@@ -14,13 +14,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ##### Libraries
 
-- <a href="https://docs.python.org/2/library/pickle.html#module-pickle">Pickle</a>
-- <a href="https://scikit-learn.org/stable/">scikit-learn</a>
-- <a href="https://www.nltk.org/">nltk</a>
-- <a href="https://pandas.pydata.org/">Pandas</a>
-- <a href="https://docs.python.org/3/library/collections.html">collections</a>
-- <a href="https://docs.python.org/3/library/pprint.html">pprint</a>
-- <a href="https://matplotlib.org/">Matplotlib</a>
+- <a href="https://docs.python.org/2/library/pickle.html#module-pickle" target="_blank">Pickle</a>
+- <a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a>
+- <a href="https://www.nltk.org/" target="_blank">nltk</a>
+- <a href="https://pandas.pydata.org/" target="_blank">Pandas</a>
+- <a href="https://docs.python.org/3/library/collections.html" target="_blank">collections</a>
+- <a href="https://docs.python.org/3/library/pprint.html" target="_blank">pprint</a>
+- <a href="https://matplotlib.org/" target="_blank">Matplotlib</a>
 
 ##### Datasets
 
