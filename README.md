@@ -24,7 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 - <a href="https://www.kaggle.com/augustop/portuguese-tweets-for-sentiment-analysis">Portuguese Tweets for Sentiment Analysis</a>
 
-##### Improvements
+## Improvements
 
 - [ ] Add more views to the dashboard interface
 - [ ] Optimize tweets capture from streaming
