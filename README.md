@@ -8,6 +8,10 @@ Link to the app: <a href="http://doug-sentiment-analyzer.mybluemix.net/">Sentime
 
 ### Prerequisites
 
+#### Access to Twitter Streaming
+
+** Be sure to create your credentials and update it into the streaming.py file. **
+
 ##### Libraries
 
 - <a href="https://docs.python.org/2/library/pickle.html#module-pickle" target="_blank">Pickle</a>
