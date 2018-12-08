@@ -10,7 +10,7 @@ Link to the app: <a href="http://doug-sentiment-analyzer.mybluemix.net/">Sentime
 
 #### Access to Twitter Streaming
 
-**Be sure to create your credentials and update it into the streaming.py file.**
+**Warning: Be sure to create your credentials and update it into the streaming.py file.**
 
 ##### Libraries
 
