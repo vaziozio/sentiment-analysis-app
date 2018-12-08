@@ -1,0 +1,6 @@
+---
+applications:
+ - name: sentiment-analysis-app
+   routes:
+   - route: doug-sentiment-analyzer.mybluemix.net
+   memory: 1GB
