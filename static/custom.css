@@ -1,0 +1,26 @@
+.predictedNeutro {
+    color: saddlebrown;
+    background-color:rgba(238,232,170, 0.9);
+}
+
+.predictedNegativo {
+    color: darkred;
+    background-color:rgba(243, 83, 83, 0.9);
+}
+
+.predictedPositivo {
+    color: darkgreen;
+    background-color:rgba(83, 243, 166, 0.9);
+}
+
+div.msg_bbl {
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 1px;
+}
+
+@media only screen and (max-width: 600px) {
+  .scores-panel {
+    margin-bottom: 50px;
+  }
+}
