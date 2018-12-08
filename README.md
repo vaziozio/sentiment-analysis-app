@@ -19,6 +19,7 @@ Be sure to create your <a href="https://developer.twitter.com/en/docs/basics/aut
 - <a href="https://www.nltk.org/">nltk</a>
 - <a href="https://pandas.pydata.org/" target="_blank">Pandas</a>
 - <a href="https://matplotlib.org/" target="_blank">Matplotlib</a>
+- <a href="http://www.tweepy.org/">Tweepy</a>
 
 ##### Datasets
 
