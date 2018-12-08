@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Twitter Sentiment Analysis</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!-- Canvasjs -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js">
+        <!-- Custom js & css -->
+        <link rel="stylesheet" href="{{url_for('static', filename='custom.css')}}">
+        <script type="text/javascript" src="{{url_for('static', filename='custom.js')}}"></script>
+    </head>
+    <body>
+        <!--Navbar-->
+        <nav class="navbar bg-dark">
+            <span class="navbar-text text-white"><i class="fab fa-twitter"></i> Live Sentiment Analysis</span>
+        </nav>
+            <!--General Container-->
+            <section class="container" id="streaming">
+              <!--Streaming Panel-->
+              <div class="row" id="streaming">
+                  <h2 class="text-center text-dark p-4 col-sm-12"><i class="fas fa-chart-line"></i> Predictions Streaming</h2>
+                  <div class="col-sm-8 mb-2">
+                      <div class="no_message">
+                        <div class="message_holder p-3 bg-light border rounded" style="max-height: 400px;overflow:auto"></div>
+                      </div>
+                  </div>
+                  <!--Tweets Counters-->
+                  <div class="col-sm-4 scores-panel">
+                      <div class="card bg-light mb-3">
+                          <div class="card-header text-success"><h5><i class="far fa-smile-wink"></i> Positive Tweets</h5></div>
+                          <div class="card-body">
+                            <p class="card-text">Count: <strong class="counted-good text-success">0</strong></p>
+                          </div>
+                        </div>
+                      <div class="card bg-light mb-3">
+                          <div class="card-header text-warning"><h5><i class="far fa-meh"></i> Neutral Tweets</h5></div>
+                          <div class="card-body">
+                            <p class="card-text">Count: <strong class="counted-neutral text-warning">0</strong></p>
+                          </div>
+                        </div>
+                      <div class="card bg-light mb-3">
+                          <div class="card-header text-danger"><h5><i class="far fa-frown"></i> Negative Tweets</h5></div>
+                          <div class="card-body">
+                            <p class="card-text">Count: <strong class="counted-negative text-danger">0</strong></p>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+            </section>
+            <nav class="fixed-bottom navbar bg-dark">
+                <span class="navbar-text text-white "><i class="fa fa-terminal text-warning" aria-hidden="true"></i> Development by: <a class="text-warning font-weight-bold" href="mailto:dougs.h.silva@gmail.com?Subject=Hi,%20Doug!">doguinha :)</a></span>
+            </nav>
+    </body>
+</html>
