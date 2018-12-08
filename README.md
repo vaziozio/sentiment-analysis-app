@@ -32,4 +32,4 @@ These instructions will get you a copy of the project up and running on your loc
 - [ ] Optimize tweets capture from streaming
 - [ ] Implement Accurate Text Preprocessing tasks
 - [ ] Implement lexicon-based approach
-- [ ] Deploy App through Docker Image
+- [ ] Deploy to Kubernetes
