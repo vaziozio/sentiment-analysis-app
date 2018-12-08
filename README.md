@@ -27,6 +27,9 @@ These instructions will get you a copy of the project up and running on your loc
 ## Improvements
 
 - [ ] Add more views to the dashboard interface
+- [ ] Review labels given to the train data
+- [ ] Add user input live analyzer
 - [ ] Optimize tweets capture from streaming
-- [ ] Implement Preprocessing text tasks
+- [ ] Implement Accurate Text Preprocessing tasks
 - [ ] Implement lexicon-based approach
+- [ ] Deploy App through Docker Image
