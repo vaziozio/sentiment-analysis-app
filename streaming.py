@@ -7,10 +7,10 @@ import json
 import time
 
 #loading credentials
-ckey = 'H4Hti0o8AlZbiICIxuO2M45mS'
-csecret = '2NbOl6GQu2GjZyQNLFwVSgzFvYInZWTFm3YY9MzI2PQx1VY9CP'
-atoken ='1068182081820348417-niQ4nYhDrf2JtI10ItiPl8GS6TiI6P'
-asecret = 'F8vqXZoRYavgGVJLcG4bnjveYnHzUxP0eGi7hOF2lXdHM'
+ckey = 'Client key'
+csecret = 'Client secret'
+atoken ='Access token'
+asecret = 'Access secret'
 #streaming listener
 class listener(StreamListener):
     #getting data
