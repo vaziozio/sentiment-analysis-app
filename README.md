@@ -28,7 +28,7 @@ Be sure to create your <a href="https://developer.twitter.com/en/docs/basics/aut
 - <a href="https://www.kaggle.com/augustop/portuguese-tweets-for-sentiment-analysis">Portuguese Tweets for Sentiment Analysis</a>
 
 ## Improvements
-
+- [ ] Review labels and re-train model
 - [ ] Add more views to the dashboard interface
 - [ ] Review labels given to the train data
 - [ ] Add user input live analyzer
