@@ -1,60 +1,89 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Twitter Sentiment Analysis</title>
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">        
-        <!-- Custom css -->
-        <link rel="stylesheet" href="{{url_for('static', filename='custom.css')}}">
-        <!-- jQuery -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <!-- Custom js -->
-        <script type="text/javascript" src="{{url_for('static', filename='custom.js')}}"></script>
-        
-    </head>
-    <body>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Twitter Sentiment Analysis</title>
+            <!-- Bootstrap css-->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">       
+			<!-- jQuery -->
+            <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+            <!-- Custom css -->
+            <link rel="stylesheet" href="{{url_for('static', filename='custom.css')}}">
+            <!-- Bootstrap js -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <!-- Custom js -->
+            <script type="text/javascript" src="{{url_for('static', filename='custom.js')}}"></script>
+            <!-- Charts library -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+            <script type="text/javascript" src="{{url_for('static', filename='charts.js')}}"></script>
+        </head>
+        <body>
         <!--Navbar-->
-        <nav class="navbar bg-dark">
-            <span class="navbar-text text-white"><i class="fab fa-twitter"></i> Live Sentiment Analysis</span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <span class="navbar-brand text-warning"><i class="fab fa-twitter"></i> Live Sentiment Analysis</span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link view-selector text-white" href="#streaming-panel" id="stream-view" data-toggle="collapse" data-target="#navbarNav">Streaming View</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link view-selector text-white" href="#statistics-panel" id="chart-view" data-toggle="collapse" data-target="#navbarNav">Chart View</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-            <!--General Container-->
-            <section class="container" id="streaming-panel">
-              <!--Streaming Panel-->
-              <div class="row" id="streaming">
-                  <h2 class="text-center text-dark p-4 col-sm-12"><i class="fas fa-chart-line"></i> Predictions Streaming</h2>
-                  <div class="col-sm-8 mb-2">
-                      <div class="no_message">
+        <!--Streaming Container-->
+        <section class="container" id="streaming-panel">
+            <!--Streaming Panel-->
+            <div class="row" id="streaming">
+                <h2 class="text-center text-dark p-4 col-sm-12"><i class="fas fa-chart-line"></i> Predictions Streaming</h2>
+                <div class="col-sm-8 mb-2">
+                    <div class="no_message">
                         <div class="message_holder p-3 bg-light border rounded" style="max-height: 400px;overflow:auto"></div>
                       </div>
-                  </div>
-                  <!--Tweets Counters-->
-                  <div class="col-sm-4 scores-panel">
-                      <div class="card bg-light mb-3">
-                          <div class="card-header text-success"><h5><i class="far fa-smile-wink"></i> Positive Tweets</h5></div>
-                          <div class="card-body">
+                </div>
+                <!--Tweets Counters-->
+                <div class="col-sm-4 scores-panel">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header text-success"><h5><i class="far fa-smile-wink"></i> Positive Tweets</h5></div>
+                        <div class="card-body">
                             <p class="card-text">Count: <strong class="counted-good text-success">0</strong></p>
-                          </div>
                         </div>
-                      <div class="card bg-light mb-3">
-                          <div class="card-header text-warning"><h5><i class="far fa-meh"></i> Neutral Tweets</h5></div>
-                          <div class="card-body">
+                    </div>
+                    <div class="card bg-light mb-3">
+                        <div class="card-header text-warning"><h5><i class="far fa-meh"></i> Neutral Tweets</h5></div>
+                        <div class="card-body">
                             <p class="card-text">Count: <strong class="counted-neutral text-warning">0</strong></p>
-                          </div>
                         </div>
-                      <div class="card bg-light mb-3">
-                          <div class="card-header text-danger"><h5><i class="far fa-frown"></i> Negative Tweets</h5></div>
-                          <div class="card-body">
+                    </div>
+                    <div class="card bg-light mb-3">
+                        <div class="card-header text-danger"><h5><i class="far fa-frown"></i> Negative Tweets</h5></div>
+                        <div class="card-body">
                             <p class="card-text">Count: <strong class="counted-negative text-danger">0</strong></p>
-                          </div>
                         </div>
-                  </div>
-              </div>
-            </section>
-            <nav class="fixed-bottom navbar bg-dark">
-                <span class="navbar-text text-white "><i class="fa fa-terminal text-warning" aria-hidden="true"></i> Development by: <a class="text-warning font-weight-bold" href="mailto:dougs.h.silva@gmail.com?Subject=Hi,%20Doug!">doguinha :)</a></span>
-            </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Statistics Panel -->
+        <section class="container d-none mb-5" id="statistics-panel">
+            <div id="statistics">
+                <h2 class="text-center text-dark p-4 col-sm-12"><i class="fas fa-chart-line"></i> Predictions Histogram</h2>
+                <div class="col-md-12">
+                    <canvas id="negativeChart" style="max-height:430px!important"></canvas>
+                    <canvas id="neutralChart" style="max-height:430px!important"></canvas>
+                    <canvas id="positiveChart" style="max-height:430px!important"></canvas>
+                </div>
+            </div>
+        </section>
+        <!--Bottom bar-->
+        <nav class="fixed-bottom navbar bg-dark">
+            <span class="navbar-text text-white "><i class="fa fa-terminal text-warning" aria-hidden="true"></i> Development by: <a class="text-warning font-weight-bold" href="mailto:dougs.h.silva@gmail.com?Subject=Hi,%20Doug!">doguinha :)</a></span>
+        </nav>
     </body>
 </html>
