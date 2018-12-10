@@ -4,6 +4,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import CountVectorizer
 import pickle
 import os
+from hourcounter import tweets_count, count_tweets
 from streaming import StreamListener
 
 #loading saved model
@@ -25,7 +26,9 @@ def add_tweet():
     request_data = request.get_json()
     values_to_predict = vect.transform([request_data['tweet']])
     prediction = clf.predict(values_to_predict)
-    tweet_json['tweet'],tweet_json['sentiment'] = request_data['tweet'],prediction[0]
+    tweet, sentiment = request_data['tweet'],prediction[0]
+    tweet_json['tweet'],tweet_json['sentiment'] = tweet, sentiment
+    count_tweets(sentiment)
     return 'Success'
 
 #defining template route '/'
@@ -38,8 +41,11 @@ def index():
 def api():
     return jsonify(tweet_json)
 
+#counter endpoint
+@app.route('/count', methods=['GET'])
+def count():
+    return jsonify(tweets_count)
+
 #running app
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True, port=port)
-    
-
