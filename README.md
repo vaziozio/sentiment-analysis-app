@@ -4,7 +4,7 @@ sentiment-analysis-app
 
 Sentiment analysis Flask App using tweepy streaming functionality
 
-<img src="https://github.com/vaziozio/sentiment-analysis-app/blob/master/appinterfacev2.png?raw=true">
+<img src="https://github.com/vaziozio/sentiment-analysis-app/blob/master/appinterface.png?raw=true">
 
 Link to the app: <a href="http://doug-sentiment-analyzer.mybluemix.net/">Sentiment Analyzer</a>
 
