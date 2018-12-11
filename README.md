@@ -28,6 +28,7 @@ Be sure to create your <a href="https://developer.twitter.com/en/docs/basics/aut
 - <a href="https://www.kaggle.com/augustop/portuguese-tweets-for-sentiment-analysis">Portuguese Tweets for Sentiment Analysis</a>
 
 ## Improvements
+- [ ] Implement Flask-socketio to stream (HURRY ACTION!!!)
 - [ ] Review labels and re-train model
 - [ ] Add more views to the dashboard interface
 - [ ] Review labels given to the train data
