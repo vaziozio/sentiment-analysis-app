@@ -21,7 +21,7 @@ class listener(StreamListener):
 
             requests.post('http://doug-sentiment-analyzer.mybluemix.net/add_tweet', json={'tweet':json_text})
         except:
-            time.sleep(3)
+            time.sleep(30)
         return True
 
 #composing authentication
