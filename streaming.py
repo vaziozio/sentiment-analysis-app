@@ -15,7 +15,6 @@ asecret = 'Access secret'
 class listener(StreamListener):
     #getting data
     def on_data(self, data):
-    	time.sleep(0.09)
         try:
             json_content = json.loads(data)
             json_text = json_content['text']
@@ -23,7 +22,7 @@ class listener(StreamListener):
         except Exception as e: 
         	print(e)
         	requests.post('http://doug-sentiment-analyzer.mybluemix.net/add_tweet', json={'tweet':e})
-        	time.sleep(15)
+        	time.sleep(3)
         return True
 
 #composing authentication
