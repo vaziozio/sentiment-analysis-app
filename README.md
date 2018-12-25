@@ -36,5 +36,4 @@ Be sure to create your <a href="https://developer.twitter.com/en/docs/basics/aut
 - [ ] Add user input live analyzer
 - [ ] Optimize tweets capture from streaming
 - [ ] Implement Accurate Text Preprocessing tasks
-- [ ] Implement lexicon-based approach
 - [ ] Deploy to Kubernetes
