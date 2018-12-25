@@ -18,7 +18,6 @@ Be sure to create your <a href="https://developer.twitter.com/en/docs/basics/aut
 
 - <a href="https://docs.python.org/2/library/pickle.html#module-pickle" target="_blank">Pickle</a>
 - <a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a>
-- <a href="https://www.nltk.org/">nltk</a>
 - <a href="https://pandas.pydata.org/" target="_blank">Pandas</a>
 - <a href="https://matplotlib.org/" target="_blank">Matplotlib</a>
 - <a href="http://www.tweepy.org/">Tweepy</a>
